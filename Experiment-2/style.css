@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.login-btn {
+    padding: 6px 14px;
+    background: #4e54c8;
+    color: white;
+    border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    max-width: 500px;
+}
+
+.hero-text span {
+    display: block;
+    color: #ffd369;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    max-width: 450px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background: white;
+    color: #4e54c8;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background: white;
+}
+
+.stat h2 {
+    color: #4e54c8;
+    font-size: 32px;
+}
+
+/* CATEGORIES */
+.categories {
+    padding: 60px;
+}
+
+.categories h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+
+
+/* LOGIN PAGE STYLES */
+
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(-45deg, #4e54c8, #8f94fb, #43cea2, #185a9d);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    font-size: 15px;
+}
+
+.field input:focus {
+    outline: none;
+}
+
+.field label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.3s;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.field span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    top: -6px;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.field input:focus ~ span,
+.field input:valid ~ span {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.row a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    transform: translateY(-2px);
+}
+
+.bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.bottom a {
+    color: white;
+}
