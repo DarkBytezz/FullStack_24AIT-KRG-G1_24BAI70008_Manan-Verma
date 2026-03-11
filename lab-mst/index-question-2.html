@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic List</title>
+
+<style>
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:rgb(255, 255, 255);
+    padding:30px;
+    border-radius:12px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.add{
+    background:#4CAF50;
+    color:white;
+}
+
+.remove{
+    background:#ff4d4d;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+li{
+    background:#f3f3f3;
+    padding:10px;
+    margin:5px 0;
+    border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Dynamic List</h2>
+
+<input type="text" id="itemInput" placeholder="Enter item">
+
+<br>
+
+<button class="add" onclick="addItem()">Add Item</button>
+<button class="remove" onclick="removeItem()">Remove Last Item</button>
+
+<ul id="itemList"></ul>
+
+</div>
+
+<script>
+
+function addItem() {
+
+    let input = document.getElementById("itemInput").value;
+    if(input === "") return;
+    let li = document.createElement("li");
+
+    li.textContent = input;
+
+    document.getElementById("itemList").appendChild(li);
+
+}
+
+function removeItem(){
+
+    let list = document.getElementById("itemList");
+
+    if(list.lastChild){
+        list.removeChild(list.lastChild);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
